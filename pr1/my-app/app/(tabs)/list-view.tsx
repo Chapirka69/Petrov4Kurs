@@ -1,4 +1,4 @@
-import { StyleSheet, Text, ScrollView, View, TextInput, Image, Button, Alert, FlatList } from 'react-native'
+import {Text, ScrollView, View, TextInput, Button, FlatList } from 'react-native'
 
 export default function ListViewScreen() {
   //1 хзаголовок с информацией
@@ -16,8 +16,7 @@ export default function ListViewScreen() {
       <TextInput
         placeholder="Введите название..."
         style={{ borderWidth: 1, borderColor: 'gray', padding: 10, borderRadius: 5 }}
-        placeholderTextColor="gray"
-      />
+        placeholderTextColor="gray"/>
     </View>
   )
 
@@ -42,19 +41,14 @@ export default function ListViewScreen() {
       <FlatList
         data={books}
         renderItem={renderBooks}
-        scrollEnabled={false}
-      />
+        scrollEnabled={false}/>
     </View>
   )
 
   // 4 кнопа
   const renderButton = () => (
     <View style={{ backgroundColor: 'white', padding: 15, marginBottom: 15, borderRadius: 8 }}>
-      <Button
-        title="Добавить книгу"
-        onPress={() => Alert.alert('Успех!', 'Книга добавлена')}
-        color="steelblue"
-      />
+      <Button title="Добавить книгу"/>
     </View>
   )
 
